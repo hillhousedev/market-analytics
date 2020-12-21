@@ -12,7 +12,7 @@ const server = new ApolloServer ({
 
 // const server = new ApolloServer({ resolvers, typeDefs });
 
-server.listen()
+server.listen(environment.port)
     .then(({ url }) => console.log(`Server ready at ${url}. `));
 
 
