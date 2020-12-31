@@ -7,15 +7,13 @@ const newsService = Container.get(NewsService)
 const resolvers: IResolvers = {
     News: {
         id: parent => {
-            return parent.url 
+            return parent.url
         },
     },
-
     Query: {
         news: async (_, args: { id: string; last: number }) => {
-            if(args.last) {
+            if (args.last) {
                 return newsService.getLatestNews(args.id, args.last)
-
             } else {
                 return newsService.getNews(args.id)
             }
@@ -23,4 +21,4 @@ const resolvers: IResolvers = {
     },
 }
 
-export default resolvers;
+export default resolvers

@@ -1,6 +1,5 @@
-import  { gql } from 'apollo-server'
-
-export default gql `
+import { gql } from 'apollo-server'
+export default gql`
     type News {
         id: ID!
         datetime: ISODateTime!
@@ -8,7 +7,6 @@ export default gql `
         source: String!
         url: String!
         summary: String!
-        related: String
+        related: String!
     }
-`;
-
+ `;
